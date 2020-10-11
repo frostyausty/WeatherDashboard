@@ -7,15 +7,18 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+
     <header>
         <div class="header" id="header">
             <h1>Weather Dashboard</h1>
         </div>
     </header>
+
     <main id="grid">
+
         <div id="search">
             <h4>Search for a City:</h4>
-                <form id="searchBar"> 
+                <form id="searchBar" for="city"> 
                     <input type="text" placeholder="Search" name="Search">;
                 </form>
                 <button id ="button">
@@ -25,12 +28,13 @@
                     <li>Previously searched city</li>
                 </ul>
         </div>
-    
+
         <div class="currentWeather" id="current">
-            <h2>Madison (current date)</h2>
-                <div class ="current-box">
-                    
-                </div>
+            <h2>Madison (current date) (icon)</h2>
+            <p id="p1">Temperature:</p>
+            <p id="p2">Humidity:</p>
+            <p id="p3">Wind Speed:</p>
+            <p id="p4">UV Index:</p>
         </div>
 
         <div class="forecast" id="future">

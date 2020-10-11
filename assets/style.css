@@ -21,7 +21,6 @@
     list-style: none;
 }
 
-
 #searchBar {
     display: inline-block;
 }
@@ -39,6 +38,7 @@
     grid-area: 5 / 2 / 7 / 4;
     background-color: yellow;
     padding-left: 20px;
+    margin-top: 20px;
 }
 
 .header {

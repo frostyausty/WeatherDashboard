@@ -1,6 +1,7 @@
 var key = "2ad6786df1447b809884ecabeea4490a";
 var city="Madison";
 
+
 fetch(
     'https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&appid=2ad6786df1447b809884ecabeea4490a'
     )
@@ -8,7 +9,7 @@ fetch(
         if(response.ok) {
             response.json().then(function(data) {
                 // var userInput = document.querySelector("#");
-                // console.log(userInput);
+                 //console.log(userInput);
 
                 var currentTemp = data.main.temp;
                 console.log(currentTemp);
