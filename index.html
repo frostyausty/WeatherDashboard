@@ -3,20 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <main class="main">
-        <div class="searchContainer">
-            <p>sample test</p>
+    <header>
+        <div class="header" id="header">
+            <h1>Weather Dashboard</h1>
         </div>
-        <div class="weatherContainer">
-            <p>other sample</p>
+    </header>
+    <main id="grid">
+        <div id="search">
+            <h4>Search for a City:</h4>
+                <form id="searchBar"> 
+                    <input type="text" placeholder="Search" name="Search">;
+                </form>
+                <button id ="button">
+                    Search
+                </button>
+                <ul class="search-history">
+                    <li>Previously searched city</li>
+                </ul>
+        </div>
+    
+        <div class="currentWeather" id="current">
+            <h2>Madison (current date)</h2>
+                <div class ="current-box">
+                    
+                </div>
+        </div>
+
+        <div class="forecast" id="future">
+            <h3>5-Day Forecast:</h3>
+                <div class="forecast-box">
+
+                </div>
         </div>
     
     </main>
-    
-   
     <script src="./assets/script.js"></script>
 </body>
 </html>
