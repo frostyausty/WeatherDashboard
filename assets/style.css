@@ -1,0 +1,8 @@
+.main {
+    display: grid;
+    grid-template-columns: 30%, 70%;
+}
+
+.searchContainer {
+    grid-template-columns: 2;
+}
