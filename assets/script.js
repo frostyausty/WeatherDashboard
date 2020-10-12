@@ -1,29 +1,51 @@
 var key = "2ad6786df1447b809884ecabeea4490a";
-var city="Madison";
+var cityFormEl = document.querySelector("#searchBar");
+var cityInputEl = document.querySelector("#city");
+var searchButtonEl = document.querySelector("#button");
 
 
-fetch(
-    'https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&appid=2ad6786df1447b809884ecabeea4490a'
-    )
+var getCityWeather = function(city) {
+    var apiUrl="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + key;
+fetch(apiUrl)
     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
-                // var userInput = document.querySelector("#");
-                 //console.log(userInput);
 
-                var currentTemp = data.main.temp;
-                console.log(currentTemp);
+               var cityName = data.name;
+               console.log(cityName);
 
-                var humidity = data.main.humidity;
-                console.log(humidity + "%");
+               var currentDate = data.dt;
+               console.log(currentDate);
 
-                var windSpeed = data.wind.speed;
-                console.log(windSpeed);
+               var weatherIcon = data.weather.icon;
+               console.log(weatherIcon);
 
-               // var uvIndex = ;
+               var currentTemp = data.main.temp;
+               console.log(currentTemp);
 
+               var humidity = data.main.humidity;
+               console.log(humidity + "%");
+
+               var windSpeed = data.wind.speed;
+               console.log(windSpeed);
 
             });
         };
 
-    })
+    });
+};
+ 
+
+var cityWeather = function(event) {
+    event.preventDefault();
+    var userInput = cityInputEl.value.trim(); 
+    
+    if(userInput) {
+        getCityWeather(userInput);
+        cityInputEl.value="";
+    } else {
+        alert("No weather data available for that city!")
+    }
+};
+searchButtonEl.addEventListener("click", cityWeather);
+    
